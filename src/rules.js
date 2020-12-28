@@ -21,6 +21,12 @@ const minsize = (value, length) => {
     return true
 }
 
+const maxsize = (value, length) => {
+    if (!not_null(value) || value.length > length)
+        return `Tamaño máximo ${length}`;
+    return true
+}
+
 const email = value => {
     email_regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     if (!email_regex.test(value))
@@ -56,4 +62,4 @@ const check_fields = (inputs) => {
     return true;
 }
 
-export default rules = { not_null, required, minsize, email, phone, validate, check_fields, rut };
+export default rules = { not_null, required, minsize, maxsize, email, phone, validate, check_fields, rut };

@@ -21,7 +21,7 @@ export default errorCode => {
         case "auth/user-not-found":
             return "Usuario no encontrado";
         case "auth/wrong-password":
-            return "Contraseña erronea";
+            return "Contraseña errónea";
         case "auth/invalid-verification-id":
             return "Crendenciales invalidas";
         case "missing-android-pkg-name":
